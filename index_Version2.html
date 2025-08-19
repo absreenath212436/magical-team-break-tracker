@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Magical Team Break Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✨ Magical Team Break Tracker ✨</h1>
+      <p id="motivation"></p>
+    </header>
+
+    <section id="auth-section">
+      <div id="register-form">
+        <h2>Register</h2>
+        <input type="text" id="reg-username" placeholder="Username">
+        <input type="password" id="reg-password" placeholder="Password">
+        <select id="reg-avatar">
+          <option value="wizard">🧙 Wizard</option>
+          <option value="elf">🧝 Elf</option>
+          <option value="dragon">🐉 Dragon</option>
+          <option value="fairy">🧚 Fairy</option>
+        </select>
+        <button onclick="register()">Register</button>
+      </div>
+      <div id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+      </div>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <h2>Team Break Dashboard</h2>
+      <button onclick="logout()">Logout</button>
+      <button onclick="takeBreak()">✨ Take a Magical Break!</button>
+      <input type="text" id="filter-user" placeholder="Filter by username..." oninput="renderDashboard()">
+      <div id="team-grid"></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
